@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: large
+label: 'Large (640)'
+effects:
+  45f7eaba-c42f-4c24-bced-c78a6cdd119a:
+    uuid: 45f7eaba-c42f-4c24-bced-c78a6cdd119a
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 640
+      height: 640
+      crop_type: focal_point
+  894171aa-0a62-4c7a-af9a-5213c1f0f4ec:
+    uuid: 894171aa-0a62-4c7a-af9a-5213c1f0f4ec
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

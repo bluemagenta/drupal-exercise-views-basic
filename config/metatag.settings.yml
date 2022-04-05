@@ -1,0 +1,9 @@
+entity_type_groups:
+  path_alias:
+    path_alias:
+      basic: basic
+      open_graph: open_graph
+  user:
+    user:
+      basic: basic
+      open_graph: open_graph

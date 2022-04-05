@@ -1,0 +1,11 @@
+name: ''
+mail: ''
+simple_address: false
+sitestyle: true
+textonly: false
+linkonly: false
+format: full_html
+preserve_class: false
+advanced:
+  incoming: false
+  key: ''

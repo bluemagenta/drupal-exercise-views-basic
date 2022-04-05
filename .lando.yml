@@ -1,0 +1,39 @@
+# Update the name to the project name
+name: views
+recipe: drupal9
+config:
+  webroot: web
+  php: '7.4'
+  xdebug: true
+
+tooling:
+  npm:
+    service: node
+
+services:
+  appserver:
+    build:
+      - composer install
+    composer_version: 2-latest
+    overrides:
+      environment:
+        PHP_IDE_CONFIG: "serverName=appserver"
+        XDEBUG_CONFIG: "client_host=host.docker.internal"
+  mailhog:
+    type: mailhog
+    portforward: true
+    hogfrom:
+      - appserver
+
+# Uncomment/copy to .lando.local.yml file when needed
+#  solr:
+#    type: solr:8
+#    portforward: true
+#    config:
+#      dir: solr
+#  database:
+#    type: mysql:8
+#  phpmyadmin:
+#    type: phpmyadmin
+#    hosts:
+#      - database

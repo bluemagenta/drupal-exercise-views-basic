@@ -1,0 +1,4 @@
+theme: public
+defaults:
+  sender: SMTPMailSystem
+  formatter: mime_mail

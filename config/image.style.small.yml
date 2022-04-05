@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: small
+label: 'Small (360)'
+effects:
+  f5fb39ec-e67f-40f1-a341-5caee44ab4b2:
+    uuid: f5fb39ec-e67f-40f1-a341-5caee44ab4b2
+    id: image_convert
+    weight: -9
+    data:
+      extension: webp
+  3a04235d-d9f6-40ce-99e6-e4625b8837aa:
+    uuid: 3a04235d-d9f6-40ce-99e6-e4625b8837aa
+    id: focal_point_scale_and_crop
+    weight: -10
+    data:
+      width: 360
+      height: 360
+      crop_type: focal_point

@@ -1,0 +1,52 @@
+grumphp:
+  hide_circumvention_tip: true
+  ascii: ~
+  tasks:
+    phpcs:
+      standard: vendor/drupal/coder/coder_sniffer/Drupal
+      triggered_by:
+        - php
+        - module
+        - inc
+        - theme
+        - install
+        - twig
+      whitelist_patterns:
+        - /^web\/modules\/custom\/(.*)/
+        - /^web\/themes\/public\/(.*)/
+    eslint:
+      bin: node_modules/.bin/eslint
+      whitelist_patterns:
+        - /^assets\/js\/(.*)/
+      quiet: true
+    git_commit_message:
+      enforce_capitalized_subject: false
+      max_subject_width: 180
+      matchers:
+        Commit message must begin with a story number: /^(Merged|#\d+)\s/
+      case_insensitive: false
+    git_blacklist:
+      keywords:
+        - "die\\("
+        - "dump\\("
+        - "var_dump\\("
+        - "print_r\\("
+        - "kint\\("
+        - "console\\.log\\("
+        - "exit;"
+      whitelist_patterns:
+        - /^assets\/js\/(.*)/
+        - /^web\/modules\/custom\/(.*)/
+        - /^web\/themes\/public\/(.*)/
+      triggered_by:
+        - php
+        - module
+        - inc
+        - theme
+        - install
+        - twig
+        - js
+      regexp_type: E
+    git_branch_name:
+      whitelist:
+        - '/^(story|bug|task|hotfix)\/\d+[a-z-]+$/'

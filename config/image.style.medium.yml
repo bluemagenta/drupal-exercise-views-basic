@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: medium
+label: 'Medium (480)'
+effects:
+  8f167f8c-5d77-444f-a7bd-faf9da750752:
+    uuid: 8f167f8c-5d77-444f-a7bd-faf9da750752
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 480
+      height: 480
+      crop_type: focal_point
+  ee05d30f-5ba2-4ca1-92e8-1d7a767b4ef6:
+    uuid: ee05d30f-5ba2-4ca1-92e8-1d7a767b4ef6
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

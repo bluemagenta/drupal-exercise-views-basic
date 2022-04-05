@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: full
+label: 'Full (1920)'
+effects:
+  3b6d4ded-63a6-4385-a512-955cf5350746:
+    uuid: 3b6d4ded-63a6-4385-a512-955cf5350746
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1920
+      height: 450
+      crop_type: focal_point
+  bd75c88f-2d28-4bfd-b263-55cdca4b581b:
+    uuid: bd75c88f-2d28-4bfd-b263-55cdca4b581b
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

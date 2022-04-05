@@ -1,0 +1,16 @@
+parameters:
+  twig.config:
+    debug: true
+  monolog.channel_handlers:
+    php: ['info', 'error']
+    default: ['info', 'error']
+
+services:
+  monolog.handler.error:
+    class: Monolog\Handler\StreamHandler
+    arguments: ['public://error.log', 'ERROR', false]
+  monolog.handler.info:
+    class: Monolog\Handler\StreamHandler
+    arguments: ['public://info.log', 'DEBUG']
+  cache.backend.null:
+    class: Drupal\Core\Cache\NullBackendFactory

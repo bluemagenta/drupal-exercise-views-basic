@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: wide
+label: 'Wide (1200)'
+effects:
+  d9e4ce18-519e-4d2c-8919-c6d8ae62f110:
+    uuid: d9e4ce18-519e-4d2c-8919-c6d8ae62f110
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 1200
+      height: 325
+      crop_type: focal_point
+  b126c420-e3ab-4911-9de5-05b7c7117557:
+    uuid: b126c420-e3ab-4911-9de5-05b7c7117557
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp
