@@ -5,9 +5,11 @@ dependencies:
     - field.field.node.article.body
     - field.field.node.article.field_image
     - field.field.node.article.field_tags
+    - image.style.full
     - node.type.article
   module:
     - manage_display
+    - media
     - text
 id: node.article.default
 targetEntityType: node
@@ -19,16 +21,16 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 101
+    weight: 3
     region: content
   field_image:
-    type: entity_reference_entity_view
-    label: above
+    type: media_thumbnail
+    label: hidden
     settings:
-      view_mode: default
-      link: false
+      image_link: ''
+      image_style: full
     third_party_settings: {  }
-    weight: 103
+    weight: 2
     region: content
   field_tags:
     type: entity_reference_label
@@ -36,12 +38,12 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 102
+    weight: 4
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 1
     region: content
   title:
     type: title
@@ -50,7 +52,7 @@ content:
       linked: true
       tag: h2
     third_party_settings: {  }
-    weight: -50
+    weight: 0
     region: content
 hidden:
   created: true
