@@ -17,21 +17,23 @@ Create several common views use case
 The site is preinstalled with content type Article & taxonomy Tags.
 
 Create several article list:
-1. create article list page
-   1. paginate, 25 per page
-   2. display: teaser
-   3. sort: latest
-2. create featured article list
+1. create featured article list
    1. displayed on article detail page
    2. display: featured
    3. 3 item max
    4. sort latest
    5. sticky article only
    6. exclude current article
-3. create related article list
+2. create related article list
    1. displayed on article detail page
    2. display: teaser
    3. list article with same tags as current article
    4. exclude current article
    5. 5 item max
    6. sort latest
+3. create article list page
+   1. paginate, 10 per page
+   2. display: teaser
+   3. user can filter by title, author, and tag
+   4. user can sort by title or date
+   5. use combination of "only one" content type + views block
